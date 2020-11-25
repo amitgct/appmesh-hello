@@ -16,7 +16,7 @@ public class HelloWebClientController {
     public String handleRequest(Model model) {
         //accessing hello-service
         System.out.println("caller service");
-            String url = "http://localhost:8086/hello";
+            String url = "http://called-service/hello";
             RestTemplate restTemplate = new RestTemplate();
             HelloObject helloObject = restTemplate.getForObject(url,
                     HelloObject.class);
